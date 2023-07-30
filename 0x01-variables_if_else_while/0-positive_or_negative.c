@@ -1,9 +1,9 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
 
 /**
- * main - Prints a random number and states whether it is positive, negative, or zero.
+ * main - Prints a random number
  *
  * Return: Always 0 (success)
  *
@@ -28,6 +28,5 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-
 	return (0);
 }
