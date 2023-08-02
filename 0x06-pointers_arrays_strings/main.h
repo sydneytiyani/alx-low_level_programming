@@ -15,8 +15,5 @@ void print_number(int n);
 char *infinete_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
 char *rot13(char *);
-res = infinite_add(n, m, r, 100);
-res = infinite_add(n, m, r2, 10);
-res = infinite_add(n, m, r3, 11);
 
 #endif
