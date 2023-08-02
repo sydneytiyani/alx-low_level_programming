@@ -1,34 +1,29 @@
 #include "main.h"
 /**
-*cap_string - function that capitalize first character of a word
-*@str: string to capitalize
-*Return:returns the capitalized string
-*/
-char *cap_string(char *S)
+ * cap_string - capitalizes all words of a string.
+ * @p: first value to compare
+ *
+ * Return: Char
+ */
+char *cap_string(char *p)
 {
-	int i, j;
-	int a[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i = 0;
 
-	i = 0;
-	while (*(s + i) != '\0')
+	if (p[0] >= 97 && p[0] <= 122)
+		p[0] -= 32;
+	while (p[i] != '\0')
 	{
-		if (*(s + i) >= 'a' && *(s + i) <= 'z')
-			if (i == 0)
+		if (p[i] == ' ' || p[i] == '\t' || p[i] == '\n' || p[i] == ','
+		    || p[i] == ';' || p[i] == '.' || p[i] == '!' || p[i] == '?'
+		    || p[i] == '"' || p[i] == '(' || p[i] == ')' || p[i] == '{'
+		    || p[i] == '}')
+		{
+			if (p[i + 1] >= 97 && p[i + 1] <= 122)
 			{
-				*(s + i) = *(s + i) - 32;
+				p[i + 1] -= 32;
 			}
-			else
-			{
-				for (j = 0; j <= 12; j++)
-				{
-					if (a[j] == *(s + i - 1))
-					{
-						*(s + i) = *(s + i) - 32;
-					}
-				}
-			}
+		}
+		i++;
 	}
-	i++;
-}
-return (s);
+	return (p);
 }
