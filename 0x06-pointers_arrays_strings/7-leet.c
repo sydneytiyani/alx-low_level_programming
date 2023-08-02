@@ -1,23 +1,18 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
-* leet - function that encode a string
-*@str:string that will be encoded
-*Return:returns encoded string
-*/
-
-char *leet(char *str)
+ * print_chessboard - Prints a chessboard.
+ * @a: The chessboard to be printed.
+ */
+void print_chessboard(char (*a)[8])
 {
-	int index1 = 0, index2;
-	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int indx1, indx2;
 
-	while (str[++index1])
+	for (indx1 = 0; a[indx1][7]; indx1++)
 	{
-		for (index2 = 0; index2 <= 7; index2++)
-		{
-			if (str[index1] == leet[index2] ||
-			 str[index1] - 32 == leet[index2])
-				str[index1] = index2 + '0';
-		}
+		for (indx2 = 0; indx2 < 8; indx2++)
+			_putchar(a[indx1][indx2]);
+
+		_putchar('\n');
 	}
-	return (str);
 }
